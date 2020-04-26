@@ -7,7 +7,7 @@ import Category from '../models/Category';
 
 import TransactionsRepository from '../repositories/TransactionsRepository';
 
-interface csvTransection {
+interface CsvTransection {
   title: string;
   type: 'income' | 'outcome';
   value: number;
@@ -26,7 +26,7 @@ class ImportTransactionsService {
 
     const parsedCSV = readTransaction.pipe(parsers);
 
-    const transactions: csvTransection[] = [];
+    const transactions: CsvTransection[] = [];
 
     const categories: string[] = [];
 
